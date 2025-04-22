@@ -1,0 +1,20 @@
+name: ImageCraft
+main: hearlov\ImageCraft\HearMap
+version: 0.1
+api: 5.22.0
+author: Hearlov
+description: PocketMine-MP PHP Image Map Plugin
+
+permissions:
+  imagecraft.give:
+    default: op
+  imagecraft.select:
+    default: op
+  imagecraft.setimage:
+    default: op
+  imagecraft.create:
+    default: op
+  imagecraft.delete:
+    default: op
+  imagecraft.menu:
+    default: op
