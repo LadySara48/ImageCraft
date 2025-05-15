@@ -5,6 +5,7 @@ namespace hearlov\ImageCraft;
 use hearlov\ImageCraft\asyncpool\DownloadTask;
 use hearlov\ImageCraft\cache\ImageCache;
 use hearlov\ImageCraft\img\BaseImage;
+use hearlov\ImageCraft\img\Frame;
 use hearlov\ImageCraft\math\ImageMapSerializer;
 use hearlov\ImageCraft\math\ImageSplitter;
 use pocketmine\player\Player;
@@ -117,8 +118,8 @@ class MapProcess{
 
         $data = HearMap::getInstance()->provider->getMapData($name);
         foreach($data as $args){
-            $classes[0] = $loras[$args["lora"]];
-            $class = new BaseImage($args["id"], $classes, $args["name"], $args["lora"]);
+            $cls[0] = new Frame(ImageMapSerializer::unserializeString($loras[$args["lora"]]));
+            $class = new BaseImage($args["name"], $args["id"], $cls, $args["lora"]);
             ImageCache::registerMap($args["id"], $args["name"], $class);
         }
 
