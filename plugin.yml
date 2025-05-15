@@ -1,6 +1,6 @@
 name: ImageCraft
 main: hearlov\ImageCraft\HearMap
-version: 0.1
+version: 1.0.0B
 api: 5.22.0
 author: Hearlov
 description: PocketMine-MP PHP Image Map Plugin
