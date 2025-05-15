@@ -31,7 +31,7 @@ class DownloadTask extends AsyncTask{
             return;
         }
 
-        if (!in_array(getimagesizefromstring($imageContent)["mime"] ?? "", ["image/jpeg", "image/png", "image/jpg", "image/webp"])) {
+        if (!in_array(getimagesizefromstring($imageContent)["mime"] ?? "", ["image/jpeg", "image/png", "image/jpg", "image/bmp"])){
             $this->setResult("The received file is not a supported image format.");
             return;
         }

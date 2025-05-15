@@ -18,7 +18,7 @@ class MapProcess{
      * @const Array IMAGE_EXTENSIONS
      * Supported image extensions.
      * I originally planned to support WebP when developing this plugin, but unfortunately,
-     * the GD library in PHP-Binaries behaves like an outdated version and does not support WebP.
+     * the GD library in PHP-Binaries behaves like an outdated version or does not support WebP.
      */
     CONST IMAGE_EXTENSIONS = [
         "jpg", "jpeg", "png"

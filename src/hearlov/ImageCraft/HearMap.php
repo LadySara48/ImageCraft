@@ -59,9 +59,6 @@ class HearMap extends PluginBase implements Listener{
         ]);
         $this->provider = new MapProvider();
         ImageCache::registerAllMap($this->provider);
-
-        //MapProcess::createMapInFile($this->getDataFolder()."tifa", "tifa3", "jpg", 16, 9);
-
     }
 
     public function registerItems(): void{

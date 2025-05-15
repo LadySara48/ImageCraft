@@ -2,6 +2,7 @@
 
 namespace hearlov\ImageCraft\command;
 
+use hearlov\ImageCraft\HearMap;
 use hearlov\ImageCraft\MapProcess;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -39,6 +40,10 @@ class CreateImageCommand extends Command{
 
         MapProcess::createMapInCommand($args[1], $args[0], (int)$args[2], (int)$args[3], $sender);
 
+    }
+
+    public function getOwningPlugin(): HearMap{
+        return HearMap::getInstance();
     }
 
 }

@@ -3,6 +3,7 @@
 namespace hearlov\ImageCraft\command;
 
 use hearlov\ImageCraft\cache\ImageCache;
+use hearlov\ImageCraft\HearMap;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\math\Vector3;
@@ -50,6 +51,10 @@ class GiveMapCommand extends Command{
                 return $b->getMapItem();
             }, $images);
         }
+    }
+
+    public function getOwningPlugin(): HearMap{
+        return HearMap::getInstance();
     }
 
 }

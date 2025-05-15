@@ -3,6 +3,7 @@
 namespace hearlov\ImageCraft\command;
 
 use hearlov\ImageCraft\cache\ImageCache;
+use hearlov\ImageCraft\HearMap;
 use hearlov\ImageCraft\img\BaseImage;
 use pocketmine\block\ItemFrame;
 use pocketmine\command\Command;
@@ -94,6 +95,8 @@ class SetImageCommand extends Command{
         }
     }
 
-
+    public function getOwningPlugin(): HearMap{
+        return HearMap::getInstance();
+    }
 
 }

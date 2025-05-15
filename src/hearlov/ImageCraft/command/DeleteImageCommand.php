@@ -3,6 +3,7 @@
 namespace hearlov\ImageCraft\command;
 
 use hearlov\ImageCraft\cache\ImageCache;
+use hearlov\ImageCraft\HearMap;
 use hearlov\ImageCraft\img\BaseImage;
 use hearlov\ImageCraft\MapProcess;
 use pocketmine\command\Command;
@@ -49,6 +50,10 @@ class DeleteImageCommand extends Command{
 
 
 
+    }
+
+    public function getOwningPlugin(): HearMap{
+        return HearMap::getInstance();
     }
 
 }

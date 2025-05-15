@@ -2,6 +2,7 @@
 
 namespace hearlov\ImageCraft\command;
 
+use hearlov\ImageCraft\HearMap;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerInteractEvent;
@@ -38,6 +39,10 @@ class SelectFrameCommand extends Command{
             unset(self::$playerMode[$player->getName()]);
             $player->sendMessage("You can now use the /setimage command.");
         }
+    }
+
+    public function getOwningPlugin(): HearMap{
+        return HearMap::getInstance();
     }
 
 }
